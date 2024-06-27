@@ -14,7 +14,6 @@ test.describe.parallel('Search for an article', () => {
 
         await homePage.visit()
         await homePage.acceptCookies()
-        await homePage.wait(1000)
         await expect(page).toHaveTitle(MAIN_PAGE_TITLE)
     })
 
@@ -22,10 +21,7 @@ test.describe.parallel('Search for an article', () => {
 
         await articlePage.searchArticle(ARTICLE)
 
-        await page.waitForTimeout(1000)
         await articlePage.clickFirstArticle()
-
-        await page.waitForTimeout(1000)
         const pageTitle: string = await page.title()
         assert(pageTitle.includes(ARTICLE))
     })
@@ -33,7 +29,6 @@ test.describe.parallel('Search for an article', () => {
     test('Negative - Search for an article', async ({page}) => {
 
         await articlePage.searchArticle(ARTICLE_WRONG)
-        await page.waitForTimeout(1000)
         await articlePage.checkError(ARTICLE_WRONG)
     })
 })

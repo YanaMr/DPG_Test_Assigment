@@ -19,6 +19,7 @@ export class HomePage extends BasePage {
 
     async navigateToLoginPage() {
         await this.logIn.click()
+        await this.wait(1000)
     }
 
     async confirmUserName(name: string) {

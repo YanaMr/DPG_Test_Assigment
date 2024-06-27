@@ -10,7 +10,7 @@ export class PodcastPage extends BasePage {
 
     constructor(page: Page) {
         super(page)
-        this.podcasts = page.locator('xpath=//a[@data-category="teaser"]')
+        this.podcasts = page.locator('//a[@data-category="teaser"]')
         this.title = page.locator('//title >> nth=0')
     }
 

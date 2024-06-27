@@ -23,10 +23,13 @@ export class ArticlePage extends BasePage {
         await this.search.click()
         await this.typeArticle.pressSequentially(article, {delay: 100})
         await this.searchButton.click()
+        await this.wait(1000)
     }
 
     async clickFirstArticle() {
+        await this.wait(1000)
         await this.firstArticle.click()
+        await this.wait(1000)
     }
 
     async checkError(article: string) {

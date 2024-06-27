@@ -9,7 +9,6 @@ test.describe.parallel('Open random podcast and check that correct podcast is op
         podcastPage = new PodcastPage(page)
         await podcastPage.visit()
         await podcastPage.acceptCookies()
-        await podcastPage.wait(1000)
         await expect(page).toHaveTitle(PODCAST_PAGE_TITLE)
     })
 

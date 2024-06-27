@@ -33,6 +33,7 @@ export class LoginPage extends BasePage {
     async insertPassword(password: string) {
         await this.password.pressSequentially(password, {delay: 100})
         await this.submitButton.click()
+        await this.wait(1000)
     }
 
     async insertCode(code: string) {
@@ -55,5 +56,4 @@ export class LoginPage extends BasePage {
         const error: string = await this.loginBlocked.innerText()
         assert(error.includes(errormessage))
     }
-
 }

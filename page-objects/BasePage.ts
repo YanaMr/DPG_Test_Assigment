@@ -13,6 +13,7 @@ export abstract class BasePage {
 
     async acceptCookies() {
         const privacyIframe = this.page.frameLocator('#sp_message_iframe_1118242')
-        await privacyIframe.locator('//button[@title=\"Akkoord\"]').click()
+        await privacyIframe.locator('//button[@title="Akkoord"]').click()
+        await this.wait(1000)
     }
 }

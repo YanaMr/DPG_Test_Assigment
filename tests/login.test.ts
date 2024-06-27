@@ -1,7 +1,8 @@
 import {expect, test} from '@playwright/test';
 import {
     EMAIL,
-    EMAIL_WRONG, ERROR_LOGIN_BLOCKED,
+    EMAIL_WRONG,
+    ERROR_LOGIN_BLOCKED,
     ERROR_WRONG_EMAIL,
     ERROR_WRONG_PASSWORD,
     LOGIN_PAGE_TITLE,
@@ -66,7 +67,6 @@ test.describe.parallel('Login scenarios', () => {
 
         await logInPage.insertEmail(EMAIL)
         await logInPage.insertPassword(PASSWORD_WRONG)
-        await page.waitForTimeout(1000)
         await logInPage.validatePasswordError(ERROR_WRONG_PASSWORD)
     })
 })
