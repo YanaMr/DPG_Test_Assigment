@@ -1,0 +1,17 @@
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Project exclude paths
+/page-objects/ArticlePage.js
+/page-objects/BasePage.js
+/page-objects/HomePage.js
+/page-objects/LoginPage.js
+/page-objects/PodcastPage.js
+/tests/articleSearch.test.js
+/tests/login.test.js
+/tests/podcast.test.js
+/utils/constants.js
+/playwright.config.js
