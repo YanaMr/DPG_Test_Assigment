@@ -7,8 +7,8 @@ Test core repo created to demonstrate the usage of Playwright in action along wi
 ### Installation
 1. Clone the repo
 
-   HTTP: ` `  
-   Github CLI: ` ` 
+   HTTP: `https://github.com/YanaMr/DPG_Test_Assigment.git`  
+   Github CLI: `gh repo clone YanaMr/DPG_Test_Assigment` 
 
 2. Install NodeJS and NPM
 
